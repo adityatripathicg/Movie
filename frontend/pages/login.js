@@ -155,7 +155,7 @@ export default function Login() {
         {/* Register Link */}
         <div className="text-center mt-8">
           <p className="text-gray-400">
-            Don't have an account?{' '}
+            Don&apos;t have an account?{' '}
             <button
               onClick={() => router.push('/register')}
               className="text-primary hover:text-primary/80 font-semibold transition-colors 

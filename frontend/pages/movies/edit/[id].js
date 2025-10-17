@@ -28,6 +28,7 @@ export default function EditMovie() {
     if (id) {
       fetchMovie()
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user, router, id])
 
   const fetchMovie = async () => {
