@@ -94,7 +94,7 @@ export default function Movies() {
             My movies
             <button
               onClick={() => router.push('/movies/create')}
-              className="text-2xl hover:text-primary transition-colors"
+              className="text-2xl text-black hover:text-primary transition-colors"
               title="Add new movie"
             >
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
