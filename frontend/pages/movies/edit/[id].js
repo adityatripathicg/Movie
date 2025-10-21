@@ -97,15 +97,15 @@ export default function EditMovie() {
       formData.append('title', title)
       formData.append('publishing_year', publishingYear)
       
+      // Only append the poster if a new file was selected
       if (poster) {
         formData.append('poster', poster)
-      } else if (existingPoster) {
-        formData.append('poster', existingPoster)
       }
 
       await api.put(`/movies/${id}`, formData)
       router.push('/movies')
     } catch (error) {
+      console.error('Error updating movie:', error)
       setErrors({ 
         general: error.response?.data?.message || 'Failed to update movie' 
       })

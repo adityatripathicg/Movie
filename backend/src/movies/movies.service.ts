@@ -65,11 +65,19 @@ export class MoviesService {
     userId: string,
     file: Express.Multer.File,
   ) {
-    const poster = file ? file.path : updateMovieDto.poster;
+    // Only update poster if a new file was uploaded
+    const updateData: any = {
+      title: updateMovieDto.title,
+      publishing_year: updateMovieDto.publishing_year,
+    };
+
+    if (file) {
+      updateData.poster = file.path;
+    }
 
     const movie = await this.movieModel.findOneAndUpdate(
       { _id: id, user_id: userId },
-      { ...updateMovieDto, poster },
+      updateData,
       { new: true },
     );
 
