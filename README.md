@@ -63,3 +63,8 @@ npm run dev
 
 http://localhost:3000
 
+ ## Demo Account Credentials :
+
+demo@gmail.com
+demo123
+
